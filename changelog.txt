@@ -1,0 +1,28 @@
+Changelog:
+=========================================
+2020-03-04:
+    [+] Added shiny Pokemon tracking (separate from regular
+        Pokemon tracking).
+    [+] Added several new commands:
+        -> add_shiny (alias: as)
+            => Adds a new shiny Pokemon to be tracked
+        -> display_pokemon (alias: display [args])
+            => Displays an embed with a user's tracked
+               Pokemon. Currently the 'all' modifier is
+               locked to the bot owner (Knifesurge#1723
+               and Carlos94563#0697)
+        -> remove_pokemon (alias: rp)
+            => Removes a tracked Pokemon. This cannot be 
+               reversed!
+        -> remove_shiny_pokemon (alias: rs)
+            => Removes a tracked shiny Pokemon. This cannot
+               be reversed!
+    [~] Modified the bot owner restrictions to the restart, 
+        shutdown, and certain modifiers to the display 
+        command. This is implemented with a 
+        is_admin(user_id:str)->bool function.
+    [~] Put the tracked-pokemon and shiny-pokemon filenames
+        into some global constants to allow easier changing 
+        of names if so desired later on.
+    
+    
